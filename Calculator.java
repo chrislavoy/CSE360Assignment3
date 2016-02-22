@@ -16,35 +16,35 @@ public class Calculator {
 	
 	/** Returns the total */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/** Adds a value to the total
 	 * @param value		the value to add to the total 
 	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/** Subtracts a value from the total
 	 * @param value		the value to subtract from the total
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/** Multiplies the total by a value
 	 * @param value		the value to multiply the total by 
 	 */
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	/**	Divides the total by a value
 	 * @param value		the value to divide the total by
 	 */
 	public void divide (int value) {
-		
+		total /= value;
 	}
 	
 	/** Returns the history of operations done by the calculator as a String */
