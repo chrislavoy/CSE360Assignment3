@@ -56,6 +56,10 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		Calculator calculator = new Calculator();
-		assertEquals("", calculator.getHistory());
+		calculator.add(5);
+		calculator.subtract(3);
+		calculator.multiply(10);
+		calculator.divide(4);
+		assertEquals("0 + 5 - 3 * 10 / 4", calculator.getHistory());
 	}
 }

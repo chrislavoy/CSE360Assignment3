@@ -9,9 +9,13 @@ public class Calculator {
 	/** A value to hold the calculated to */
 	private int total;
 	
+	/** A String that holds the history of operations done on the calculator */
+	private String history;
+	
 	/** Sets total to 0 */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/** Returns the total */
@@ -24,6 +28,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total += value;
+		history += " + " + value;
 	}
 	
 	/** Subtracts a value from the total
@@ -31,6 +36,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total -= value;
+		history += " - " + value;
 	}
 	
 	/** Multiplies the total by a value
@@ -38,6 +44,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total *= value;
+		history += " * " + value;
 	}
 	
 	/**	Divides the total by a value
@@ -45,10 +52,11 @@ public class Calculator {
 	 */
 	public void divide (int value) {
 		total /= value;
+		history += " / " + value;
 	}
 	
 	/** Returns the history of operations done by the calculator as a String */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
